@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Princess Enterprises-Day4</title>
+<style>
+    body {
+        background-color: #f0f8ff;
+        font-family: Arial;
+    }
+    h1{
+        color: #100996;
+        text-align: Center;
+    }
+h2 {
+    color: darkblue;
+}
+ul {
+    background-color:rgb(199, 223, 235);
+    border: 2px solid rgb(194, 133, 194);
+    padding: 20px;
+    border-radius: 10px;
+}
+b {
+    color: rgb(233, 5, 5);
+}
+</style>
+</head>
+<body>
+    <h1>Princess Enterprises Pvt. Ltd. Th. Bakhatgarh</h1>
+    <h2>Humara Products</h2>
+    <ul>
+        <li>Product 1 - Best Quality</li>
+        <li>Product 2 - Best Service</li>
+        <li>Product 3 - Fast Delivery</li>
+    </ul>
+    <p>Ye<b> bahut hi important,</b> company hai.</p>
+    <a href="2nd Day html.html">Day 02 pe wapas jao</a>
+    <hr>
+    <h2 style="text-align:center:">order kro </h2>
+    <div style="text-align:center; border:2px solid black; padding:20px; width:300px; margin:0 auto;">
+        <input type="text" id="naam" placeholder="Your Name" style="padding:10px; width:90%; margin:5px;"><br>
+        <input type="text" id="mobile" placeholder="Mobile Number" style="padding:10px; width:90%; margin:5px;"><br><br>
+        <Select id="product">
+            <option>Best Quality</option>
+           <option>Second Quality</option>
+           <option>Premium Quality</option>
+    </select>
+            <button onclick="orderKaro()" style="padding:10px 90px; background-color:green;color:white; font-size:16px; cursor:pointer;">
+                Order Bhejo
+            </button>
+    </div>
+    <script>
+        function orderKaro() {
+            let n = document.getElementById("naam").value;
+            let m = document.getElementById("mobile").value;
+            let p = document.getElementById("product").value;
+            alert("Dhanyawad " + n + " ! Aapka " + p + " ka order milgya. Hum " + m + " pe call karenge - Princess Enterprise Pvt. Ltd. Th. Bakhatgarh");
+            // Pehle customer ko dhanyawad dikhao
+            // Phir WhatsAapp pe order bhejo
+            let msg = "Naya Order - Princess Enterprise Pvt. Ltd. Th. Bakhatgarh %0a%0a Naam:" + n + "%0a Mobile: "+ m + "%0a Product: " + p;
+            let meraNumber = "918463075902"
+           window.location.href = "https://wa.me/"+meraNumber+"?text="+msg;
+        }
+        </script>
+        
