@@ -58,14 +58,10 @@
             let n = document.getElementById("naam").value;
             let m = document.getElementById("mobile").value;
             let p = document.getElementById("product").value;
-            alert("Dhanyawad " + n + " ! Aapka " + p + " ka order milgya. Hum " + m + " pe call karenge - Princess Enterprise Pvt. Ltd. Th. Bakhatgarh");
-            // Pehle customer ko dhanyawad dikhao
-            // Phir WhatsAapp pe order bhejo
-            let msg = "Naya Order - Bakti Baisa Clection Th. Bakhatgarh/n/nNaam: " + n + "/nMobile: "+ m + "/nProduct: " + p;
+            let msg = "Naya Order - Bhakti Baisa Collection Th. Bakhatgarh\n\nNaam: " + n + "\nMobile: "+ m + "\nProduct: " + p;
             let meraNumber = "918463075902"
-           window.open("https://wa.me/" + MeraNumber + "?text="+ encdeURIComponet(msg), "_blank");
-            alert("Dhanyawad " + n + " ! Aapka " + p + " ka order milgya. Hum " + m + " pe call karenge.");
-              
+           window.open("https://wa.me/" + meraNumber + "?text="+ encodeURIComponet(msg), "_blank");
+           alert("Dhanyawad " + n + " ! Aapka " + p + " ka order milgya. Hum " + m + " pe call karenge.");   
         }
         </script>
     <div style="text-align:center;">
