@@ -18,7 +18,7 @@
     #popup{display:none; position:fixed; top:0; left:0: width:100%; height:100%; border-radius:10px; font-size:15px; font-weight:bold; cursor:pointer}
     #popup img{max-width:90% max-height:85%; border-radius:15px}
     {popup span{position:absolute:fixed: top:15px; right:20px: color:white; font-size:35px; cursor:pointer}
-    @media(max-width:500px){.gtid{grid-template-columns: 1fr 1fr} h1 {font-size:22px}}
+    @media(max-width:500px){.grid{grid-template-columns: 1fr 1fr} h1 {font-size:22px}}
 </style>
 </head>
 <body>
@@ -37,10 +37,10 @@
            <option>Blue Omber Poshak - Rs. 4,500</option>
            <option>Full Kudan set - Rs. 3,000</option>
             <option>Full Kund Jewellery Set2 - Rs. 3,999</option>
-            <optin>Blue Ombre Royal Poshak - Rs. 4,500</optin>
+            <optin>Blue Ombre Royal Poshak - Rs. 4,500</option>
             <option>Cream Sherwani - Rs. 13,500</option>
             <option>Cream Royal Sherwani - Rs. 7,500</option>
-            <optin>Rani Pink Saafa - Rs. 1,100</optin>
+            <optin>Rani Pink Saafa - Rs. 1,100</option>
             <option>Orange Bandhej Saafa - Rs. 3,000</option>
             <option>Multi-Colour Royal Saafa - Rs. 1,800 </option>
             <option>Iice Blue Anarkali Kurta - Rs. 999</option>
@@ -55,6 +55,9 @@
     </div>
     <script>
         function orderKaro(product) {
+        if(product == 'General Order'){
+            product=document.getElementByID("product").value;
+        }
             let n = document.getElementById("naam").value;
             let m = document.getElementById("mobile").value;
             if(!n || !m){
