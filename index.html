@@ -48,15 +48,34 @@
             <option>Blue Yellow Omber Sequence Anarkali - Rs. 1450</option>
             <option>Lvory to Peach to Pink Omber Anarkali - Rs. 2,750</option>
             <option>Plain Yellow Anarkali with White-Yellow Ombre Duptta - Rs. 499</option>
-    </select>
-            <button onclick="OrderKaro('General Order')" style="padding:10px 90px; background-color:green;color:white; font-size:16px; cursor:pointer;">
-                Order Bhejo
-            </button>
+    </select><br><br>
+            <button onclick="OrderKaro('General Order')" style="padding:10px 90px; background-color:green;color:white; font-size:16px; cursor:pointer;">Order Bhejo</button>
     </div>
+                <br>
+                <div style="text-aglign:center;>
+                <div class="grid">
+                <div class="card">
+                <img src="Gulabi Orange Poshak.jpg" onclick="openImg("this.src)">
+                <b>Gulabi Orange Poshak</b>
+                <div class="price">Rs. 9,999</div>
+                <button onclick="OrderKaro('Gulabi Orange Poshak')">Order Karo</button>
+                </div>
+                <div class="card">
+                <img src="Red White Poshak.jpg" onclick="openImg("this.src)">
+                <b>Red White Poshak</b>
+                <div class="price">Rs. 5,499</div>
+                <button onclick="OrderKaro('Red White Poshak')">Order Karo</button>
+                </div>
+            </div>
+        <div>
+        <div id="popup" onclick="this.style.display='none'">
+            <span onclick="document.getElementByID('popup').style.display='none'">X</span>span>
+            <img id="popupImg" src="">
+        </div>
     <script>
-        function orderKaro(product) {
+        function openImg(src){
         if(product == 'General Order'){
-            product=document.getElementByID("product").value;
+            product = document.getElementByID("product").value;
         }
             let n = document.getElementById("naam").value;
             let m = document.getElementById("mobile").value;
@@ -69,20 +88,7 @@
            window.open("https://Wa.me/" + meraNumber + "?text="+ encodeURIComponet(msg), "_blank");   
         }
         </script>
-    <div style="text-align:center;">
-        <div class="grid">
-        <div class="card">
-        <img src="Gulabi Orange Poshak.jpg" onclick="openImg("this.src)">
-        <b>Gulabi Orange Poshak</b>
-        <div class="price">Rs. 9,999</div>
-        <button onclick="OrderKaro('Gulabi Orange Poshak')">Order Karo</button>
-        <div style="text-align:center;"
-        <div class="grid">
-        <div class="card>
-        <img src="Red White Poshak.jpg" onclick="openImg("this.src)"> 
-        <b>Red White Poshak</b>
-        <div class="price">Rs. 5,500</div>
-        <button onclick="OrderKaro('Red White Poshak')">Order Karo</button>
         </div>
+            </html >
         
         
