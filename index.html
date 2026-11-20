@@ -36,10 +36,11 @@
         document.getElementById("popupImg").src = src;
         document.getElementById("popup").style.display = "block";
     }
-    function OrderKaro(product, price) {
+    async function OrderKaro(product, price, photo) {
         if(product == 'General Order'){
             product = document.getElementById("product").value;
-            price = product; // uper wale select me price namm me hi hai
+            price = product;
+            phot = "";
         }
         let n = document.getElementById("naam").value;
         let m = document.getElementById("mobile").value;
@@ -50,6 +51,9 @@
          let msg = "Naya Order - Bhakti Baisa Collection Th. Bakhatgarh\n\nNaam: " + n + "\nMobile: " + m + "\nProduct: " + product;
         let meraNumber = "918463075902";
         alert("Dhanyawad " + n + " ! Aapka " + product + " ka order milgya. Bhakti Baisa Collection " + m + " call karenge.");
+        // Mobile me photo direct jayegi
+        if (photo){
+            try {
         window.open("https://wa.me/" + meraNumber + "?text=" + encodeURIComponent(msg), "_blank");   
         <div id="popup" onclick="this.style.display='none'">
             <span onclick="document.getElementByID('popup').style.display='none'">X</span>span>
