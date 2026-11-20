@@ -31,9 +31,30 @@
     <div style="text-align:center; border:2px solid black; padding:20px; width:300px; margin:0 auto;">
         <input type="text" id="naam" placeholder="Your Name" style="padding:10px; width:90%; margin:5px;"><br>
         <input type="text" id="mobile" placeholder="Mobile Number" style="padding:10px; width:90%; margin:5px;"><br><br>
+        <script>
+    function openImg(src){
+        document.getElementById("popupImg").src = src;
+        document.getElementById("popup").style.display = "block";
+    }
+    function OrderKaro(product) {
+        if(product == 'General Order'){
+            product = document.getElementById("product").value;
+        }
+        let n = document.getElementById("naam").value;
+        let m = document.getElementById("mobile").value;
+        if(!n || !m){
+            alert("Pehle apna Naam aur Mobile number upar likho");
+            return;
+        }
+        let msg = "Naya Order - Bhakti Baisa Collection Th. Bakhatgarh\n\nNaam: " + n + "\nMobile: " + m + "\nProduct: " + product;
+        let meraNumber = "918463075902";
+        alert("Dhanyawad " + n + " ! Aapka " + product + " ka order milgya. Bhakti Baisa Collection " + m + " call karenge.");
+        window.open("https://wa.me/" + meraNumber + "?text=" + encodeURIComponent(msg), "_blank");
+    }
+</script>
         <Select id="product">
             <option>Gulabhi Orange Poshak- Rs. 9,999</option>
-            <option>Red-White Chidiya Poshak - Rs. 5,500</option>
+            <option>Red-White Chidiya Poshak - Rs. 5,499</option>
            <option>Blue Omber Poshak - Rs. 4,500</option>
            <option>Full Kudan set - Rs. 3,000</option>
             <option>Full Kund Jewellery Set2 - Rs. 3,999</option>
@@ -58,13 +79,13 @@
                 <img src="Gulabi Orange Poshak.jpg" onclick="openImg("this.src)">
                 <b>Gulabi Orange Poshak</b>
                 <div class="price">Rs. 9,999</div>
-                <button onclick="OrderKaro('Gulabi Orange Poshak')">Order Karo</button>
+                <button onclick="OrderKaro('Gulabi Orange Poshak', 'Rs. 9,999,)">Order Karo</button>
                 </div>
                 <div class="card">
                 <img src="Red White Poshak.jpeg" onclick="openImg("this.src)">
                 <b>Red White Poshak</b>
                 <div class="price">Rs. 5,499</div>
-                <button onclick="OrderKaro('Red White Poshak')">Order Karo</button>
+                <button onclick="OrderKaro('Red White Poshak',5,499)">Order Karo</button>
                 </div>
             </div>
         <div>
@@ -72,26 +93,6 @@
             <span onclick="document.getElementByID('popup').style.display='none'">X</span>span>
             <img id="popupImg" src="">
         </div>
-    <script>
-    function openImg(src){
-        document.getElementById("popupImg").src = src;
-        document.getElementById("popup").style.display = "block";
-    }
-    function OrderKaro(product) {
-        if(product == 'General Order'){
-            product = document.getElementById("product").value;
-        }
-        let n = document.getElementById("naam").value;
-        let m = document.getElementById("mobile").value;
-        if(!n || !m){
-            alert("Pehle apna Naam aur Mobile number upar likho");
-            return;
-        }
-        let msg = "Naya Order - Bhakti Baisa Collection Th. Bakhatgarh\n\nNaam: " + n + "\nMobile: " + m + "\nProduct: " + product;
-        let meraNumber = "918463075902";
-        alert("Dhanyawad " + n + " ! Aapka " + product + " ka order milgya. Bhakti Baisa Collection " + m + " call karenge.");
-        window.open("https://wa.me/" + meraNumber + "?text=" + encodeURIComponent(msg), "_blank");
-    }
-</script>
+    
         
         
