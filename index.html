@@ -49,12 +49,12 @@
             <option>Lvory to Peach to Pink Omber Anarkali - Rs. 2,750</option>
             <option>Plain Yellow Anarkali with White-Yellow Ombre Duptta - Rs. 499</option>
     </select>
-            <button onclick="orderKaro()" style="padding:10px 90px; background-color:green;color:white; font-size:16px; cursor:pointer;">
+            <button onclick="orderKaro('General Order')" style="padding:10px 90px; background-color:green;color:white; font-size:16px; cursor:pointer;">
                 Order Bhejo
             </button>
     </div>
     <script>
-        function orderKaro(Product) {
+        function orderKaro(product) {
             let n = document.getElementById("naam").value;
             let m = document.getElementById("mobile").value;
             if(!n || !m){
