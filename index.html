@@ -36,19 +36,12 @@
         document.getElementById("popupImg").src = src;
         document.getElementById("popup").style.display = "block";
     }
-    async function OrderKaro(product, price, photo) {
-        if(product == 'General Order'){
-            product = document.getElementById("product").value;
-            price = product;
-            photo = "";
-        }
-        let n = document.getElementById("naam").value;
-        let m = document.getElementById("mobile").value;
-        if(!n || !m){
-            alert("Pehle apna Naam aur Mobile number upar likho");
-            return;
-        }
-         let msg = "Naya Order - Bhakti Baisa Collection Th. Bakhatgarh\n\nNaam: " + n + "\nMobile: " + m + "\nProduct: " + product + "/nPrice: "+ price;
+    async function OrderKaro(product,price,photo) {
+        if(product == 'General Order'){product=document.getElementById("product").value;price = product; photo = "";}
+        let n=document.getElementById("naam").value;
+        let m=document.getElementById("mobile").value;
+        if(!n || !m){ alert("Pehle apna Naam aur Mobile number upar likho");return;}
+        let msg ="Naya Order - Bhakti Baisa Collection Th. Bakhatgarh\n\nNaam: " + n + "\nMobile: " + m + "\nProduct: " + product + "/nPrice: "+ price;
         let meraNumber = "918463075902";
         alert("Dhanyawad " + n + " ! Aapka " + product + " ka order milgya. Bhakti Baisa Collection " + m + " call karenge.");
         // Mobile me photo direct jayegi
