@@ -40,7 +40,7 @@
         if(product == 'General Order'){
             product = document.getElementById("product").value;
             price = product;
-            phot = "";
+            photo = "";
         }
         let n = document.getElementById("naam").value;
         let m = document.getElementById("mobile").value;
@@ -56,7 +56,7 @@
             try {
                 let response = await fetch (photo);
                 let blob = await response.blob();
-                let file = new File ([blob], photo, {tye: blob.type});
+                let file = new File ([blob], photo, {type: blob.type});
                 if (navigator.canShare && naviator.canShare({files: [file])) {
                     await navigator.share({files: {file}, text: msg, title: product });
                     return;
@@ -64,10 +64,9 @@
             } catch (e) {}
         }
         // laptop pe link jayega
-        let linkMsg = msg + "/nphoto dekho: https://niharikasinghranawat558gitub.io/My-website/" + photo;
-        window.open("https//wa.me/918462075902/text="= encodeURIComponent(linkMsg), "_bank");
+        let linkMsg = msg + "/nphoto dekho: https://niharikasinghranawat558-arch.github.io/My-website
+        window.open("https//wa.me/918463075902?text="= encodeURIComponent(linkMsg), "_bank");
     }
-        window.open("https://wa.me/" + meraNumber + "?text=" + encodeURIComponent(msg), "_blank");   
         <div id="popup" onclick="this.style.display='none'">
             <span onclick="document.getElementByID('popup').style.display='none'">X</span>span>
             <img id="popupImg" src="">
@@ -101,13 +100,13 @@
                 <img src="Gulabi Orange Poshak.jpg" onclick="openImg("this.src)">
                 <b>Gulabi Orange Poshak</b>
                 <div class="price">Rs. 9,999</div>
-                <button onclick="OrderKaro('Gulabi Orange Poshak', 'Rs. 9,999,''Gulabi range Poshak.jpg')">Order Karo</button>
+                <button onclick="OrderKaro('Gulabi Orange Poshak', 'Rs. 9,999,''Gulabi Orange Poshak.jpg')">Order Karo</button>
                 </div>
                 <div class="card">
                 <img src="Red White Poshak.jpeg" onclick="openImg("this.src)">
                 <b>Red White Poshak</b>
                 <div class="price">Rs. 5,499</div>
-                <button onclick="OrderKaro('Red White Poshak','Rs. 5,499')">Order Karo</button>
+                <button onclick="OrderKaro('Red White Poshak','Rs. 5,499,'Red White Poshak.jpeg.')">Order Karo</button>
                 </div>
             </div>
         <div>
