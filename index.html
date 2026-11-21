@@ -41,8 +41,10 @@
         let n=document.getElementById("naam").value;
         let m=document.getElementById("mobile").value;
         if(!n || !m){ alert("Pehle apna Naam aur Mobile number upar likho");return;}
+        let msg ="Namaste! Mujhe Order Karna Hai\n\nNaam: " + n + "\nMobile: " + m + "\nProduct: 
         let msg ="Naya Order - Bhakti Baisa Collection Th. Bakhatgarh\n\nNaam: " + n + "\nMobile: " + m + "\nProduct: " + product + "/nPrice: "+ price;
-        let meraNumber = "918463075902";
+           window.open("https//wa.me/918463075902?text="= encodeURIComponent(linkMsg), "_bank");
+        document.getElementById("popup").style.display="flex";
         alert("Dhanyawad " + n + " ! Aapka " + product + " ka order milgya. Bhakti Baisa Collection " + m + " call karenge.");
         // Mobile me photo direct jayegi
         if (photo){
