@@ -2,56 +2,91 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhakti Baisa Collection</title>
+<title>Niharika - Anarkali & Saafa</title>
 <style>
-body{font-family:Arial;text-align:center;background:#fff8f0;margin:0;padding:10px}
-h1{color:#b30059}
-input,select{width:90%;max-width:350px;padding:12px;margin:8px;border:1px solid #ccc;border-radius:8px;font-size:16px}
-button{background:#b30059;color:white;border:none;padding:13px 25px;border-radius:25px;font-size:16px;cursor:pointer}
-.card{border:1px solid #ddd;border-radius:12px;padding:10px;margin:15px auto;max-width:350px;background:white}
-.card img{width:100%;border-radius:10px}
-#popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);justify-content:center;align-items:center}
-#popup div{background:white;padding:25px;border-radius:12px}
+body{font-family:Arial; background:#fff5f5; margin:0; padding:15px; text-align:center}
+h1{color:#d63384; font-size:26px}
+p{color:#555}
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:15px}
+.card{background:white; border-radius:15px; padding:10px; box-shadow:0 2px 10px #ddd}
+.card img{width:100%; border-radius:12px; cursor:pointer}
+.card b{font-size:14px; display:block; margin:8px 0 2px}
+.price{color:green; font-weight:bold; margin-bottom:8px}
+button{background:#25D366; color:white; border:none; padding:10px; width:100%; border-radius:10px; font-size:15px; font-weight:bold; cursor:pointer}
+button:active{transform:scale(0.97)}
+/* Bada Photo Wala Popup */
+#popup{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:99}
+#popup img{max-width:90%; max-height:85%; border-radius:15px}
+#popup span{position:absolute; top:15px; right:20px; color:white; font-size:35px; cursor:pointer}
+@media(max-width:500px){.grid{grid-template-columns:1fr 1fr} h1{font-size:22px}}
 </style>
 </head>
 <body>
 
-<h1>Bhakti Baisa Collection</h1>
-<p>Th. Bakhatgarh</p>
+<h1>✨ Niharika Collection ✨</h1>
+<p>Anarkali | Saafa | Sherwani - Udaipur Style</p>
 
-<h3>Order Form</h3>
-<input id="naam" placeholder="Apna Naam"><br>
-<input id="mobile" placeholder="Mobile Number" type="tel"><br>
-<select id="product">
-<option>Blue Lehenga - Rs.2500</option>
-<option>Green Rajputi Poshak - Rs.3500</option>
-<option>Pink Lehenga - Rs.2800</option>
-<option>Red Poshak - Rs.3200</option>
-<option>Yellow Lehenga - Rs.2200</option>
-</select><br><br>
-<button onclick="OrderKaro('General Order')">Order Bhejo</button>
+<div class="grid">
 
 <div class="card">
-<h3>Blue Lehenga - Rs.2500</h3>
-<button onclick="OrderKaro('Blue Lehenga','Rs.2500')">Order Karo</button>
+<img src="Multi Colour Saafa3.jpeg" onclick="openImg(this.src)">
+<b>Multi-Colour Royal Saafa</b>
+<div class="price">Rs. 1,200</div>
+<button onclick="order('Multi-Colour Royal Saafa - Rs. 1200')">Order Karo</button>
 </div>
 
 <div class="card">
-<h3>Green Rajputi Poshak - Rs.3500</h3>
-<button onclick="OrderKaro('Green Rajputi Poshak','Rs.3500')">Order Karo</button>
+<img src="Ice Blue Kurta.jpeg" onclick="openImg(this.src)">
+<b>Ice Blue Anarkali Kurta</b>
+<div class="price">Rs. 899</div>
+<button onclick="order('Ice Blue Anarkali Kurta - Rs. 899')">Order Karo</button>
 </div>
 
-<div id="popup"><div><h2>Dhanyawad!</h2><p>Aapka Order mil gaya hai.</p><button onclick="document.getElementById('popup').style.display='none'">Band Karo</button></div></div>
+<div class="card">
+<img src="Purple Kurta.jpeg" onclick="openImg(this.src)">
+<b>Abstract Print Organza Anarkali</b>
+<div class="price">Rs. 700</div>
+<button onclick="order('Abstract Print Organza Anarkali - Rs. 700')">Order Karo</button>
+</div>
+
+<div class="card">
+<img src="Sky Blue Kurta.jpeg" onclick="openImg(this.src)">
+<b>Blue Yellow Ombre Sequence Anarkali</b>
+<div class="price">Rs. 1450</div>
+<button onclick="order('Blue Yellow Ombre Sequence Anarkali - Rs. 1450')">Order Karo</button>
+</div>
+
+<div class="card">
+<img src="White Pink Kurta.jpeg" onclick="openImg(this.src)">
+<b>Ivory to Peach to Pink Ombre Anarkali</b>
+<div class="price">Rs. 2,750</div>
+<button onclick="order('Ivory to Peach to Pink Ombre Anarkali - Rs. 2750')">Order Karo</button>
+</div>
+
+<div class="card">
+<img src="Yellow Kurta.jpeg" onclick="openImg(this.src)">
+<b>Plain Yellow Anarkali with White-Yellow Ombre Dupatta</b>
+<div class="price">Rs. 999</div>
+<button onclick="order('Plain Yellow Anarkali with White-Yellow Ombre Dupatta - Rs. 999')">Order Karo</button>
+</div>
+
+</div>
+
+<div id="popup" onclick="this.style.display='none'">
+<span>X</span>
+<img id="bigImg">
+</div>
 
 <script>
-function OrderKaro(product,price){
-if(product=='General Order'){ product=document.getElementById('product').value; }
-let n=document.getElementById('naam').value;
-let m=document.getElementById('mobile').value;
-if(!n||!m){ alert('Pehle apna Naam aur Mobile number likho'); return; }
-let msg='Namaste! Mujhe Order Karna Hai\n\nNaam: '+n+'\nMobile: '+m+'\nProduct: '+product;
-window.open('https://wa.me/918463075902?text='+encodeURIComponent(msg),'_blank');
-document.getElementById('popup').style.display='flex';
+function openImg(src){
+  document.getElementById('bigImg').src = src;
+  document.getElementById('popup').style.display = 'flex';
+}
+function order(product){
+  // YAHAN APNA NUMBER DALO
+  var number = "91XXXXXXXXXX";
+  var msg = "Hello! Mujhe ye wala order karna hai: " + product;
+  window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(msg), "_blank");
 }
 </script>
 
