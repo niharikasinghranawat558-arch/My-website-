@@ -1,0 +1,15 @@
+{
+  "name":"Bhakti Baisa Collection",
+  "short_name": "Bhakti Baisa",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "8b0000",
+  "theme_color": "#8b0000",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/512X512?text=BBC",
+      "sizes": "512X512:,
+      "type": "image/png"
+    }
+  ]
+}
